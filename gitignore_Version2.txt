@@ -1,0 +1,6 @@
+# Keep repository clean
+.DS_Store
+node_modules/
+dist/
+assets/images/*
+!.gitkeep

@@ -1,0 +1,24 @@
+name: Fetch images
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download images
+        run: |
+          mkdir -p assets/images
+          wget -nd -r -l2 -P assets/images -A jpg,jpeg,png,gif,svg -e robots=off https://www.radhikasteel.net/
+
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images || true
+          git commit -m "Fetch images from source site" || echo "No changes to commit"
+          git push

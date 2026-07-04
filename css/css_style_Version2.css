@@ -1,0 +1,26 @@
+/* Clean responsive stylesheet for Saraswati Wires */
+:root{
+  --accent:#c0392b;
+  --bg:#f6f7fb;
+  --muted:#666;
+  --card-bg:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:var(--bg); -webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:var(--card-bg);padding:0.75rem 0;border-bottom:1px solid #e6e9ef}
+.brand{display:inline-block;margin:0;font-size:1.25rem;color:var(--accent)}
+.nav{float:right}
+.nav a{color:#333;margin-left:1rem;text-decoration:none;font-weight:500}
+.hero{padding:4rem 0;background:linear-gradient(180deg,#1f3a64 0%,#163755 100%);color:#fff}
+.hero .hero-inner{max-width:720px}
+.hero h2{font-size:2rem;margin:0 0 .5rem}
+.hero p{margin:0 0 1rem;color:rgba(255,255,255,0.9)}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.card{background:var(--card-bg);padding:1.25rem;margin:1.25rem 0;border-radius:8px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.product img{width:100%;height:160px;object-fit:cover;border-radius:6px;background:#f0f0f0}
+.product h4{margin:.5rem 0 0}
+.contact p{margin:.5rem 0;color:var(--muted)}
+.site-footer{padding:1rem 0;text-align:center;color:#666}
+@media (max-width:600px){.nav{float:none;text-align:right;margin-top:.5rem}}
